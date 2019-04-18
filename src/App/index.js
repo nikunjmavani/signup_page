@@ -40,27 +40,27 @@ class App extends Component {
   }
 
   render() {
-    const { username, loggedIn, loading, error, driver} = this.state;
+    const { username, loggedIn, loading, error, driver } = this.state;
     const { classes } = this.props;
 
     return (
       <div className="App">
         {
           !loggedIn ?
-          (
-            <div className="login-page-div">
-              <div className="login-box-wrapper" style={{ backgroundImage: './bg.jpg' }}>
-                <div className="form-box">
-                  {/* <form onSubmit={this.authenticateUser}> */}
+            (
+              <div className="login-page-div">
+                <div className="login-box-wrapper">
+                  <div className="form-box">
+                    {/* <form onSubmit={this.authenticateUser}> */}
                     <div className="form-head">
-                      Sign Up
+                      <h2>Sign Up</h2>
                     </div>
 
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                       {
-                        !driver ? 
-                        <strong> Client </strong>
-                        : <div> Client </div>
+                        !driver ?
+                          <strong> Client </strong>
+                          : <div> Client </div>
                       }
                       <Switch
                         checked={this.state.driver}
@@ -69,112 +69,124 @@ class App extends Component {
                         color="primary"
                       />
                       {
-                        driver ? 
-                        <strong> Driver </strong>
-                        : <div> Driver </div>
+                        driver ?
+                          <strong> Driver </strong>
+                          : <div> Driver </div>
                       }
                     </div>
 
                     {
                       driver
-                      ? (
-                        <React.Fragment>
-                          <TextField
-                            id="standard-name"
-                            label="Name"
-                            className={classes.textField}
-                            margin="dense"
-                            fullWidth
-                          />
-                          <TextField
-                            id="standard-name"
-                            label="Phone No"
-                            className={classes.textField}
-                            margin="dense"
-                            fullWidth
-                          />
-                          <TextField
-                            id="standard-name"
-                            label="Address"
-                            className={classes.textField}
-                            margin="dense"
-                            fullWidth
-                          />
-                          <TextField
-                            id="standard-name"
-                            label="Aadhar card number"
-                            className={classes.textField}
-                            margin="dense"
-                            fullWidth
-                          />
-                          <TextField
-                            id="standard-name"
-                            label="PAN card number"
-                            className={classes.textField}
-                            value={this.state.name}
-                            onChange={this.handleChange('name')}
-                            margin="dense"
-                            fullWidth
-                          />
-                          <TextField
-                            id="standard-name"
-                            label="Email"
-                            className={classes.textField}
-                            margin="dense"
-                            fullWidth
-                          />
-                          <TextField
-                            id="standard-name"
-                            label="Profile photo"
-                            type="file"
-                            InputLabelProps={{
-                              shrink: true
-                            }}
-                            className={classes.textField}
-                            margin="dense"
-                            fullWidth
-                          />
-                        </React.Fragment>
-                      ) : (
-                        <React.Fragment>
-                        <TextField
-                            id="standard-name"
-                            label="Name"
-                            className={classes.textField}
-                            margin="dense"
-                            fullWidth
-                          />
-                          <TextField
-                            id="standard-name"
-                            label="Company Name"
-                            className={classes.textField}
-                            margin="dense"
-                            fullWidth
-                          />
-                          <TextField
-                            id="standard-name"
-                            label="Email"
-                            type="email"
-                            className={classes.textField}
-                            margin="dense"
-                            fullWidth
-                          />
-                          <TextField
-                            id="standard-name"
-                            label="Phone No"
-                            className={classes.textField}
-                            margin="dense"
-                            fullWidth
-                          />
-                          <TextField
-                            id="standard-name"
-                            label="Address"
-                            className={classes.textField}
-                            margin="dense"
-                            fullWidth
-                          />
-                        </React.Fragment>
-                      )
+                        ? (
+                          <React.Fragment>
+                            <TextField
+                              id="standard-name"
+                              label="Name"
+                              className={classes.textField}
+                              margin="normal"
+                              variant="outlined"
+                              fullWidth
+                            />
+                            <TextField
+                              id="standard-name"
+                              label="Phone No"
+                              className={classes.textField}
+                              margin="normal"
+                              variant="outlined"
+                              fullWidth
+                            />
+                            <TextField
+                              id="standard-name"
+                              label="Address"
+                              className={classes.textField}
+                              margin="normal"
+                              variant="outlined"
+                              fullWidth
+                            />
+                            <TextField
+                              id="standard-name"
+                              label="Aadhar card number"
+                              className={classes.textField}
+                              margin="normal"
+                              variant="outlined"
+                              fullWidth
+                            />
+                            <TextField
+                              id="standard-name"
+                              label="PAN card number"
+                              className={classes.textField}
+                              value={this.state.name}
+                              onChange={this.handleChange('name')}
+                              margin="normal"
+                              variant="outlined"
+                              fullWidth
+                            />
+                            <TextField
+                              id="standard-name"
+                              label="Email"
+                              className={classes.textField}
+                              margin="normal"
+                              variant="outlined"
+                              fullWidth
+                            />
+
+                            <TextField
+                              id="standard-name"
+                              label="Profile photo"
+                              type="file"
+                              InputLabelProps={{
+                                shrink: true
+                              }}
+                              className={classes.textField}
+                              margin="normal"
+                              variant="outlined"
+                              fullWidth
+                            />
+                          </React.Fragment>
+                        ) : (
+                          <React.Fragment>
+                            <TextField
+                              id="standard-name"
+                              label="Name"
+                              className={classes.textField}
+                              margin="normal"
+                              variant="outlined"
+                              fullWidth
+                            />
+                            <TextField
+                              id="standard-name"
+                              label="Company Name"
+                              className={classes.textField}
+                              margin="normal"
+                              variant="outlined"
+                              fullWidth
+                            />
+                            <TextField
+                              id="standard-name"
+                              label="Email"
+                              className={classes.textField}
+                              margin="normal"
+                              variant="outlined"
+                              fullWidth
+                            />
+                            <TextField
+                              id="standard-name"
+                              label="Phone No"
+                              className={classes.textField}
+                              margin="normal"
+                              variant="outlined"
+                              fullWidth
+                            />
+                            <TextField
+                              id="standard-name"
+                              label="Address"
+                              className={classes.textField}
+                              margin="normal"
+                              variant="outlined"
+                              fullWidth
+                            />
+                          </React.Fragment>
+                        )
                     }
                     {/* <div className="other-links">
                       <div className="link">
@@ -186,21 +198,21 @@ class App extends Component {
                     </div> */}
                     {
                       error ?
-                      <span className="error-message"> {error} </span>
-                      : undefined
+                        <span className="error-message"> {error} </span>
+                        : undefined
                     }
                     {
                       loading ?
-                      <button className="button disabled">  <div className="loader"/> </button> 
-                      : <button className="button" type="submit" onClick={() => this.setState({ loggedIn: true })}> <div> Sign Up </div> </button>
+                        <button className="button disabled">  <div className="loader" /> </button>
+                        : <button className="button" type="submit" onClick={() => this.setState({ loggedIn: true })}> <div> Sign Up </div> </button>
                     }
-                  {/* </form> */}
+                    {/* </form> */}
                   </div>
                 </div>
-            </div>
-          ) : (
-            <div> </div>
-          )
+              </div>
+            ) : (
+              <div> </div>
+            )
         }
       </div>
     );
